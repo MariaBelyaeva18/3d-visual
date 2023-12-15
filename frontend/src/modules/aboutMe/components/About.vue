@@ -20,7 +20,6 @@
 
 <style>
 .about{
-  margin: 80px 0;
   width: 100%;
   padding: 78px 0px;
   background-color: white;
@@ -42,7 +41,6 @@
   justify-content:space-around;
 }
 .about-text h1{
-  font-size:58px;
   text-align:left;
   margin-bottom: 20px;
 }
