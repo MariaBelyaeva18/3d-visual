@@ -12,7 +12,6 @@
           ресурсов для интерьеров и экстерьеров.
           Соблюдаю сроки и четко выполняю
           поставленные задачи.</p>
-        <button class="image-button"></button>
       </div>
     </div>
   </section>
@@ -30,6 +29,7 @@
   border-radius: 100%;
 }
 .about-text{
+  margin-left: 20px;
   width: 550px;
 }
 .section-about{
@@ -56,6 +56,7 @@
   letter-spacing: 1px;
   line-height: 28px;
   font-size:18px;
+
   margin-bottom: 20px;
 }
 

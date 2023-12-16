@@ -7,7 +7,7 @@
           </div>
 
           <div class="navigation">
-            <router-link to="/about">Обо мне</router-link>
+            <router-link to="/">Обо мне</router-link>
             <router-link to="/portfolio">Портфолио</router-link>
             <router-link to="/contacts">Контакты</router-link>
           </div>

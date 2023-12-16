@@ -3,18 +3,10 @@
   <section class = "works">
 
     <div class = "port">
-      <div >
-        <div ><a href="portfolio.html"><img src="../../../assets/img/1.jpeg"/></a></div>
-      </div>
-      <div >
-        <div ><a href="portfolio.html"><img src="../../../assets/img/2.jpeg"/></a></div>
-      </div>
-      <div >
-        <div ><a href="portfolio.html"><img src="../../../assets/img/3.jpeg"/></a></div>
-      </div>
-      <div >
-        <div ><a href="portfolio.html"><img src="../../../assets/img/4.jpeg"/></a></div>
-      </div>
+      <router-link to="/interior"><img src="../../../assets/img/1.jpeg"/></router-link>
+      <router-link to="/exterior"><img src="../../../assets/img/2.jpeg"/></router-link>
+      <router-link to="/modeling"><img src="../../../assets/img/3.jpeg"/></router-link>
+      <router-link to="/docs"><img src="../../../assets/img/4.jpeg"/></router-link>
     </div>
   </section>
 </template>
@@ -44,3 +36,5 @@
 
 
 </style>
+<script setup>
+</script>
