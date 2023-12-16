@@ -29,13 +29,14 @@
     </div>
   </section>
 
-  <Button />
+  <OrderButton />
 
 </template>
 
 <script setup>
 
-import Button from "../../../layout/Button.vue";
+import OrderButton from "../../../layout/OrderButton.vue";
+
 </script>
 
 <style>

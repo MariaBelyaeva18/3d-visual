@@ -1,7 +1,8 @@
 <template>
   <section>
     <div class="main_text">
-      <h1 class="text_head">Рабочая документация дизайн-проекта интерьера</h1>
+      <h1 class="text_head">Рабочая документация</h1>
+      <h1 class="text_head">дизайн-проекта интерьера</h1>
       <h2 class="text_lower_head">Пример рабочей документации</h2>
     </div>
 
@@ -58,13 +59,13 @@
     </div>
   </section>
 
-  <Button style="margin-bottom: 60px"/>
+  <OrderButton style="margin-bottom: 60px"/>
 
 </template>
 
 <script setup>
 
-import Button from "../../../layout/Button.vue";
+import OrderButton from "../../../layout/OrderButton.vue";
 </script>
 
 <style>
@@ -78,7 +79,7 @@ import Button from "../../../layout/Button.vue";
 }
 
 .image-cell p {
-  margin-top: 10px;
+  margin-bottom: 40px;
   font-size: 25px;
 }
 

@@ -29,7 +29,7 @@
     </div>
   </section>
 
-  <Button />
+  <OrderButton />
 
   <h1>Интеграции</h1>
   <section class = "works">
@@ -43,13 +43,13 @@
     </div>
   </section>
 
-  <Button />
+  <OrderButton />
 
 </template>
 
 <script setup>
 
-import Button from "../../../layout/Button.vue";
+import OrderButton from "../../../layout/OrderButton.vue";
 </script>
 
 <style>

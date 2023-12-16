@@ -15,11 +15,13 @@
       <div class = "textcols-item">
         <div class="x"><img src="../../../assets/img/2.svg"/>
           <h3> Владею множеством программ </h3>
-          <li>3ds Max</li>
-          <li>Marvelous Designer</li>
-          <li>Adobe Photoshop</li>
-          <li>Corona Render</li>
-          <li>AutoCAD</li>
+          <div style="padding-left: 50px">
+            <li>3ds Max</li>
+            <li>Marvelous Designer</li>
+            <li>Adobe Photoshop</li>
+            <li>Corona Render</li>
+            <li>AutoCAD</li>
+          </div>
         </div>
       </div>
       <div class = "textcols-item">
@@ -63,6 +65,12 @@
   width:150px;
   height: 150px;
 }
+
+.textcols-item li {
+  text-align: left;
+  padding-left: 60px;
+}
+
 </style>
 <script setup>
 </script>

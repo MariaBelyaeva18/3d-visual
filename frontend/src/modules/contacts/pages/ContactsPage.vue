@@ -10,15 +10,15 @@
      </div>
      <div class="contacts__item">
        <img src="../../../assets/img/contacs/mail.svg">
-       <a href="mailto:vasily228@mail.ru">vasily228@mail.ru</a>
+       <a href="mailto:belnat2312@yandex.ru">belnat2312@yandex.ru</a>
      </div>
      <div class="contacts__item">
        <img src="../../../assets/img/contacs/phone.svg">
-       <a href="tel:+78005553535">8-(800)-555-35-35</a>
+       <a href="tel:+79036468733">+7-(903)-646-87-33</a>
      </div>
      <div class="contacts__item">
        <img src="../../../assets/img/contacs/telegram.svg">
-       <a href="https://t.me/tridvisual_natalya" target="_blank">@vasilisa228</a>
+       <a href="https://t.me/tridvisual_natalya" target="_blank">@tridvisual_natalya</a>
      </div>
    </div>
 
@@ -36,7 +36,7 @@
   height: 316px;
   background-color: #d2d2d2;
   border-radius: 30px;
-  margin: auto;
+  margin: 58px auto auto auto;
   color: black
 }
 
@@ -46,6 +46,7 @@ a {
 
 .items-container {
   padding-left: 17%;
+  margin-top: 15px;
 }
 
 .contacts__item {
