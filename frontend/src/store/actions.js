@@ -1,8 +1,9 @@
 import { defineStore } from "pinia"
+import axios from "axios";
 
 export const useStore = defineStore("uStore", {
     state: () => ({
-        users: [],
+        client: [],
         viewModal: false,
         form: {
             name: "",
@@ -12,4 +13,9 @@ export const useStore = defineStore("uStore", {
             email: "",
         },
     }),
+    actions: {
+        async getOrder() {
+            return axios.get(`http://localhost:8080/mail`)
+        }
+    }
 })

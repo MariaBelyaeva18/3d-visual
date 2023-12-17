@@ -99,6 +99,7 @@ export default {
     async submitItem() {
       try {
         this.store.viewModal = false
+        await this.store.getOrder()
         this.reset()
       } catch (e) {
         this.store.viewModal = true
