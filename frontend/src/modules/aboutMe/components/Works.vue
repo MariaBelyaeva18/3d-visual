@@ -34,6 +34,13 @@
   zoom:150%;
 }
 
+img {
+  transition: 0.5s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
 
 </style>
 <script setup>

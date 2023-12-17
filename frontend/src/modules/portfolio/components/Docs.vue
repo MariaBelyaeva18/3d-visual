@@ -60,12 +60,14 @@
   </section>
 
   <OrderButton style="margin-bottom: 60px"/>
+  <Form />
 
 </template>
 
 <script setup>
 
 import OrderButton from "../../../layout/OrderButton.vue";
+import Form from "./Form.vue";
 </script>
 
 <style>

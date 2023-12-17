@@ -11,7 +11,7 @@ export class AppService {
     return await this.mailerService
       .sendMail({
         to: 'belyashhh12@gmail.com',
-        from: 'shattilov@mail.ru',
+        from: 'test-web21@mail.ru',
         subject: 'Прием заказа',
         template: path.join(__dirname, '/../templates', 'formTemplate'),
         context: {

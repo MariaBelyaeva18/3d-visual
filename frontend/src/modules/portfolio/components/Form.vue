@@ -60,8 +60,6 @@
               @update:modelValue="store.form.email = $event"
           ></v-text-field>
 
-
-
           <v-btn
               type="submit"
               class="mt-2"
@@ -98,13 +96,9 @@ export default {
 
   methods: {
     async submitItem() {
-      try {
-        this.store.viewModal = false
-        await this.store.getOrder()
-        this.reset()
-      } catch (e) {
-        this.store.viewModal = true
-      }
+      this.store.viewModal = false
+      await this.store.getOrder()
+      this.reset()
     },
 
     reset() {

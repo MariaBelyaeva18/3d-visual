@@ -8,8 +8,8 @@ export const getMailConfig = async (): Promise<any> => {
       ignoreTLS: false,
       secure: true,
       auth: {
-        user: 'shattilov@mail.ru',
-        pass: 'Gn5LgA7fJG0wwG9qiHwa',
+        user: 'test-web21@mail.ru',
+        pass: 'djWEYXgZuiWVYzE4dxgq',
       },
     },
     defaults: {

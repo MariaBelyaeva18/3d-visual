@@ -3,39 +3,41 @@
   <section class = "works">
     <div class = "port">
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter1.jpg"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter2.jpg"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter3.jpg"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter4.jpg"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter5.jpg"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter6.jpg"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter7.jpg"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/z.png"/>
+        <img src ="../../../assets/img/portfolio/interior/inter8.jpg"/>
       </div>
     </div>
   </section>
 
   <OrderButton />
+  <Form />
 
 </template>
 
 <script setup>
 
 import OrderButton from "../../../layout/OrderButton.vue";
+import Form from "./Form.vue";
 
 </script>
 
