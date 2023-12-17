@@ -22,41 +22,42 @@
           <v-text-field
               label="Имя"
               density="comfortable"
-              :model-value="store.form.name"
+              :value="store.form.name"
               :rules="rules"
-              @input="store.form.name = $event.target.value"
+              @update:modelValue="store.form.name = $event"
           ></v-text-field>
 
           <v-text-field
               label="Фамилия"
               density="comfortable"
-              :model-value="store.form.surname"
+              :value="store.form.surname"
               :rules="rules"
-              @input="store.form.surname = $event.target.value"
+              @update:modelValue="store.form.surname = $event"
           ></v-text-field>
 
           <v-select
               label="Вид работы"
-              v-model="store.form.workType"
+              :value="store.form.jobType"
               :items="['Интерьер', 'Экстерьер/интеграция', 'Моделинг', 'Работа с чертежами']"
               density="comfortable"
               :rules="rules"
+              @update:modelValue="store.form.jobType = $event"
           ></v-select>
 
           <v-text-field
               label="Телефон"
               density="comfortable"
-              :model-value="store.form.telephone"
+              :value="store.form.phoneNumber"
               :rules="rules"
-              @input="store.form.telephone = $event.target.value"
+              @update:modelValue="store.form.phoneNumber = $event"
           ></v-text-field>
 
           <v-text-field
               label="Электронная почта"
               density="comfortable"
-              :model-value="store.form.email"
+              :value="store.form.email"
               :rules="rules"
-              @input="store.form.email = $event.target.value"
+              @update:modelValue="store.form.email = $event"
           ></v-text-field>
 
 
@@ -107,7 +108,6 @@ export default {
     },
 
     reset() {
-      this.$refs.form.reset()
       this.store.form = {
         name: "",
         surname: "",
