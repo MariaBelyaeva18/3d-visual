@@ -1,10 +1,8 @@
 import { defineStore } from "pinia"
 import axios from "axios";
-import form from "../modules/portfolio/components/Form.vue";
 
 export const useStore = defineStore("uStore", {
     state: () => ({
-        client: [],
         viewModal: false,
         form: {
             name: "",
@@ -16,7 +14,7 @@ export const useStore = defineStore("uStore", {
     }),
     actions: {
         async getOrder() {
-            return axios.get(`http://localhost:8080/mail`, {
+            return axios.get(`http://localhost:5000/mail`, {
                 params: this.form
             })
         }

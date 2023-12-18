@@ -1,0 +1,11 @@
+# IDEs and editors
+node_modules/
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+/.vscode/

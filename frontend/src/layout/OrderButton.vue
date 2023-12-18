@@ -2,7 +2,7 @@
   <v-btn
       color="#FF8DD871"
       style="margin-bottom: 60px"
-      @click.stop="openNew()"
+      @click.stop="this.store.viewModal = true"
   >Оформить заказ</v-btn>
 
 </template>
@@ -18,11 +18,11 @@ export default {
     }
   },
 
-  methods: {
-    async openNew() {
-      this.store.viewModal = true
-    }
-  }
+  // methods: {
+  //   async openNew() {
+  //     this.store.viewModal = true
+  //   }
+  // }
 }
 
 

@@ -22,12 +22,12 @@ export class AppService {
           email: dto.email || 'Не указано',
         },
       })
-      .catch((e) => {
-        console.log(e);
-        throw new HttpException(
-          `Ошибка работы почты: ${JSON.stringify(e)}`,
-          HttpStatus.UNPROCESSABLE_ENTITY,
-        );
-      });
+      // .catch((e) => {
+      //   console.log(e);
+      //   throw new HttpException(
+      //     `Ошибка работы почты: ${JSON.stringify(e)}`,
+      //     HttpStatus.UNPROCESSABLE_ENTITY,
+      //   );
+      // });
   }
 }

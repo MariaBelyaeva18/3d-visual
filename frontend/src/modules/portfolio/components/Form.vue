@@ -97,12 +97,11 @@ export default {
   methods: {
     async submitItem() {
       try {
-        this.store.viewModal = false
         await this.store.getOrder()
+        this.store.viewModal = false
         this.reset()
       } catch (e) {
         this.store.viewModal = true
-        this.loading = false
       }
     },
 
@@ -111,8 +110,8 @@ export default {
       this.store.form = {
         name: "",
         surname: "",
-        workType: "",
-        telephone: "",
+        jobType: "",
+        phoneNumber: "",
         email: "",
       }
     },
