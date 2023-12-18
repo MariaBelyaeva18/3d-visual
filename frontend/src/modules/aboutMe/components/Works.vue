@@ -3,10 +3,10 @@
   <section class = "works">
 
     <div class = "port">
-      <router-link to="/interior"><img src="../../../assets/img/1.jpeg"/></router-link>
-      <router-link to="/exterior"><img src="../../../assets/img/2.jpeg"/></router-link>
-      <router-link to="/modeling"><img src="../../../assets/img/3.jpeg"/></router-link>
-      <router-link to="/docs"><img src="../../../assets/img/4.jpeg"/></router-link>
+      <router-link to="/interior"><img class="work_item" src="../../../assets/img/int.jpg"/></router-link>
+      <router-link to="/exterior"><img class="work_item" src="../../../assets/img/ex.jpg"/></router-link>
+      <router-link to="/modeling"><img class="work_item" src="../../../assets/img/mod.jpg"/></router-link>
+      <router-link to="/docs"><img class="work_item" src="../../../assets/img/cher.jpg"/></router-link>
     </div>
   </section>
 </template>
@@ -34,12 +34,14 @@
   zoom:150%;
 }
 
-img {
+.work_item {
   transition: 0.5s;
+  z-index: 2;
 }
 
-img:hover {
+.work_item:hover {
   transform: scale(1.05);
+  z-index: 2;
 }
 
 </style>

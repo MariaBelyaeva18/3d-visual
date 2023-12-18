@@ -102,6 +102,7 @@ export default {
     },
 
     reset() {
+      this.$refs.form.reset()
       this.store.form = {
         name: "",
         surname: "",
