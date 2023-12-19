@@ -99,7 +99,6 @@ import { vShow } from 'vue';
 }
 
 .works {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
