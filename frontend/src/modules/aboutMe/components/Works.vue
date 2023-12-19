@@ -8,6 +8,7 @@
       <router-link to="/modeling"><img class="work_item" src="../../../assets/img/mod.jpg"/></router-link>
       <router-link to="/docs"><img class="work_item" src="../../../assets/img/cher.jpg"/></router-link>
     </div>
+
   </section>
 </template>
 
@@ -18,7 +19,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding-bottom: 39px;
 }
 
 .port {
@@ -30,6 +33,7 @@
 .works img{
   display: block;
 }
+
 .works{
   zoom:150%;
 }
