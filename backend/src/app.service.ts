@@ -15,19 +15,19 @@ export class AppService {
         subject: 'Прием заказа',
         template: path.join(__dirname, '/../templates', 'formTemplate'),
         context: {
-          name: dto.name || 'Не указано',
-          surname: dto.surname || 'Не указано',
-          jobType: dto.jobType || 'Не указано',
-          phoneNumber: dto.phoneNumber || 'Не указано',
-          email: dto.email || 'Не указано',
+          name: dto.name,
+          surname: dto.surname,
+          jobType: dto.jobType,
+          phoneNumber: dto.phoneNumber,
+          email: dto.email,
         },
       })
-      // .catch((e) => {
-      //   console.log(e);
-      //   throw new HttpException(
-      //     `Ошибка работы почты: ${JSON.stringify(e)}`,
-      //     HttpStatus.UNPROCESSABLE_ENTITY,
-      //   );
-      // });
+      .catch((e) => {
+        console.log(e);
+        throw new HttpException(
+          `Ошибка работы почты: ${JSON.stringify(e)}`,
+          HttpStatus.UNPROCESSABLE_ENTITY,
+        );
+      });
   }
 }

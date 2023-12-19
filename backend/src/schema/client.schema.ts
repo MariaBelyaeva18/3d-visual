@@ -3,7 +3,7 @@ import * as Joi from 'joi';
 const messages = {
     'any.required': 'errorEmpty',
     'any.empty': 'errorEmpty',
-    'date.base': 'errorEmpty',
+    
 };
 
 export const usersCreateSchema = Joi.object({
