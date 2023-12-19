@@ -17,12 +17,6 @@ export default {
       store: useStore()
     }
   },
-
-  // methods: {
-  //   async openNew() {
-  //     this.store.viewModal = true
-  //   }
-  // }
 }
 
 

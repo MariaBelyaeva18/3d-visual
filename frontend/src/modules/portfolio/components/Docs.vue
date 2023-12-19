@@ -8,51 +8,51 @@
 
     <div class="image-grid">
       <div class="image-cell">
-        <img src="../../../assets/img/docs/1.jpeg" alt="Image 1">
+        <img src="../../../assets/img/docs/1.jpeg" alt="Image 1" @click="zoomImage">
         <p>Титульный лист</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/2.jpeg" alt="Image 2">
+        <img src="../../../assets/img/docs/2.jpeg" alt="Image 2" @click="zoomImage">
         <p>Ведомость рабочих чертежей</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/3.jpeg" alt="Image 3">
+        <img src="../../../assets/img/docs/3.jpeg" alt="Image 3" @click="zoomImage">
         <p>Обмерный план</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/4.jpeg" alt="Image 4">
+        <img src="../../../assets/img/docs/4.jpeg" alt="Image 4" @click="zoomImage">
         <p>План демонтажа</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/5.jpeg" alt="Image 5">
+        <img src="../../../assets/img/docs/5.jpeg" alt="Image 5" @click="zoomImage">
         <p>План возводимых перегородок</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/6.jpeg" alt="Image 6">
+        <img src="../../../assets/img/docs/6.jpeg" alt="Image 6" @click="zoomImage">
         <p>План расстановки мебели</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/7.jpeg" alt="Image 7">
+        <img src="../../../assets/img/docs/7.jpeg" alt="Image 7" @click="zoomImage">
         <p>План расположения электроприборов (розеток и электровыводов)</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/8.jpeg" alt="Image 8">
+        <img src="../../../assets/img/docs/8.jpeg" alt="Image 8" @click="zoomImage">
         <p>План расположения светильников</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/9.jpeg" alt="Image 9">
+        <img src="../../../assets/img/docs/9.jpeg" alt="Image 9" @click="zoomImage">
         <p>План расположения выключателей</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/10.jpeg" alt="Image 10">
+        <img src="../../../assets/img/docs/10.jpeg" alt="Image 10" @click="zoomImage">
         <p>План потолков</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/11.jpeg" alt="Image 11">
+        <img src="../../../assets/img/docs/11.jpeg" alt="Image 11" @click="zoomImage">
         <p>План полов</p>
       </div>
       <div class="image-cell">
-        <img src="../../../assets/img/docs/12.jpeg" alt="Image 12">
+        <img src="../../../assets/img/docs/12.jpeg" alt="Image 12" @click="zoomImage">
         <p>План сантехнических выпусков</p>
       </div>
 
@@ -64,8 +64,17 @@
 
 </template>
 
-<script setup>
+<script>
+export default {
+  methods: {
+    zoomImage(event) {
+      event.target.classList.toggle('zoomed');
+    }
+  }
+}
+</script>
 
+<script setup>
 import OrderButton from "../../../layout/OrderButton.vue";
 import Form from "./Form.vue";
 </script>
@@ -84,5 +93,4 @@ import Form from "./Form.vue";
   margin-bottom: 40px;
   font-size: 25px;
 }
-
 </style>

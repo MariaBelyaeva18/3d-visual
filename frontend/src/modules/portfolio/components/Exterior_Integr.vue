@@ -3,16 +3,16 @@
   <section class = "works">
     <div class = "port">
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex1.jpg"/>
+        <img src ="../../../assets/img/portfolio/exterior/ex1.jpg" @click="zoomImage"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex2.jpg"/>
+        <img src ="../../../assets/img/portfolio/exterior/ex2.jpg" @click="zoomImage"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex3.jpg"/>
+        <img src ="../../../assets/img/portfolio/exterior/ex3.jpg" @click="zoomImage"/>
       </div>
       <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex4.jpg"/>
+        <img src ="../../../assets/img/portfolio/exterior/ex4.jpg" @click="zoomImage"/>
       </div>
     </div>
   </section>
@@ -43,8 +43,17 @@
 
 </template>
 
-<script setup>
+<script>
+export default {
+  methods: {
+    zoomImage(event) {
+      event.target.classList.toggle('zoomed');
+    }
+  }
+}
+</script>
 
+<script setup>
 import OrderButton from "../../../layout/OrderButton.vue";
 import Form from "./Form.vue";
 </script>
