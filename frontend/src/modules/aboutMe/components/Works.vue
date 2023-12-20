@@ -34,8 +34,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   z-index: 2;
   margin:0;
 }
