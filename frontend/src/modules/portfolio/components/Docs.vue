@@ -5,104 +5,17 @@
       <h1 class="text_head">дизайн-проекта интерьера</h1>
       <h2 class="text_lower_head">Пример рабочей документации</h2>
     </div>
+  </section>
 
-    <div class="image-grid">
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/1.jpeg" alt="Image 1" @click="ShowModal('m51')">
-        <p>Титульный лист</p>
+  <section class = "docs">
+    <div class = "port">
+      <div class="doc-item" v-for="image in images" :key="image.id">
+        <img :src="getImageUrl(image.src)" @click="ShowModal(image.id)"/>
+        <p>{{ image.text }}</p>
+        <div :id="image.id" class="modal-all" @click="HideModal()">
+          <img :src="getImageUrl(image.src)"/>
+        </div>
       </div>
-      <div id="m51" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/2.jpeg" alt="Image 2" @click="ShowModal('m52')">
-        <p>Ведомость рабочих чертежей</p>
-      </div>
-      <div id="m52" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/2.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/3.jpeg" alt="Image 3" @click="ShowModal('m53')">
-        <p>Обмерный план</p>
-      </div>
-      <div id="m53" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/4.jpeg" alt="Image 4" @click="ShowModal('m54')">
-        <p>План демонтажа</p>
-      </div>
-      <div id="m54" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/5.jpeg" alt="Image 5" @click="ShowModal('m55')">
-        <p>План возводимых перегородок</p>
-      </div>
-      <div id="m55" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/6.jpeg" alt="Image 6" @click="ShowModal('m56')">
-        <p>План расстановки мебели</p>
-      </div>
-      <div id="m56" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/7.jpeg" alt="Image 7" @click="ShowModal('m57')">
-        <p>План расположения электроприборов (розеток и электровыводов)</p>
-      </div>
-      <div id="m57" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/8.jpeg" alt="Image 8" @click="ShowModal('m58')">
-        <p>План расположения светильников</p>
-      </div>
-      <div id="m58" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/9.jpeg" alt="Image 9" @click="ShowModal('m59')">
-        <p>План расположения выключателей</p>
-      </div>
-      <div id="m59" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/10.jpeg" alt="Image 10" @click="ShowModal('m510')">
-        <p>План потолков</p>
-      </div>
-      <div id="m510" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/11.jpeg" alt="Image 11" @click="ShowModal('m511')">
-        <p>План полов</p>
-      </div>
-      <div id="m511" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
-      <div class="image-cell">
-        <img src="../../../assets/img/docs/12.jpeg" alt="Image 12" @click="ShowModal('m512')">
-        <p>План сантехнических выпусков</p>
-      </div>
-      <div id="m512" class="modal-doc" @click="HideModal()">
-        <img src ="../../../assets/img/docs/1.jpeg"/>
-      </div>
-
     </div>
   </section>
 
@@ -113,16 +26,38 @@
 
 <script>
 export default {
+  data () {
+    return {
+      images: [
+        {src: '1.jpeg', id: "m51", text: "Титульный лист" },
+        {src: '2.jpeg', id: "m52", text: "Ведомость рабочих чертежей" },
+        {src: '3.jpeg', id: "m53", text: "Обмерный план" },
+        {src: '4.jpeg', id: "m54", text: "План демонтажа" },
+        {src: '5.jpeg', id: "m55", text: "План возводимых перегородок" },
+        {src: '6.jpeg', id: "m56", text: "План расстановки мебели" },
+        {src: '7.jpeg', id: "m57", text: "План расположения электроприборов (розеток и электровыводов)" },
+        {src: '8.jpeg', id: "m58", text: "План расположения светильников" },
+        {src: '9.jpeg', id: "m59", text: "План расположения выключателей" },
+        {src: '10.jpeg', id: "m510", text: "План потолков" },
+        {src: '11.jpeg', id: "m511", text: "План полов" },
+        {src: '12.jpeg', id: "m512", text: "План сантехнических выпусков" },
+      ]
+    }
+  },
   methods: {
     ShowModal(elId) {
-      let modalDoc = document.getElementById(elId);
-      modalDoc.style.display = "flex";
+      let modalAll = document.getElementById(elId);
+      modalAll.style.display = "flex";
     },
 
     HideModal() {
-      if (event.target.classList.contains('modal-doc')) {
+      if (event.target.classList.contains('modal-all')) {
         event.currentTarget.style.display = "none";
       }
+    },
+
+    getImageUrl(name) {
+      return new URL(`/src/assets/img/portfolio/docs/${name}`, import.meta.url).href
     }
   }
 }
@@ -134,21 +69,28 @@ import Form from "./Form.vue";
 </script>
 
 <style>
-.image-cell {
+.doc-item {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.image-cell img {
-  width: 400px;
+.docs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.docs img{
+  width:400px;
+  display: block;
   height: auto;
+  margin: auto;
 }
 
-.image-cell p {
-  margin-bottom: 40px;
-  font-size: 25px;
-}
-
-.modal-doc {
+.modal-all {
   display: none;
   background: rgba(20, 20, 20, 0.3);
   position: fixed;
@@ -161,7 +103,12 @@ import Form from "./Form.vue";
   align-items: center;
   align-content: center;
   justify-content: center;
-  transform: scale(1.2);
+  transform: scale(3);
   z-index: 1;
 }
+
+p {
+  font-size: 14pt;
+}
+
 </style>

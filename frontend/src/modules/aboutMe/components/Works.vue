@@ -20,31 +20,28 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 0;
-  padding-bottom: 39px;
+  padding-bottom: 78px;
 }
 
 .port {
   display:grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-}
-
-.works img{
-  display: block;
-}
-
-.works{
-  zoom:150%;
+  gap: 20px;
 }
 
 .work_item {
   transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  height: 300px;
   z-index: 2;
+  margin:0;
 }
 
 .work_item:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   z-index: 2;
 }
 

@@ -2,49 +2,12 @@
   <h1>Моделинг</h1>
   <section class = "works">
     <div class = "port">
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/modeling/mod1.png" @click="ShowModal('m21')"/>
+      <div class="mod-item" v-for="image in images" :key="image.id">
+        <img :src="getImageUrl(image.src)" @click="ShowModal(image.id)"/>
+        <div :id="image.id" class="modal-all" @click="HideModal()">
+          <img :src="getImageUrl(image.src)"/>
+        </div>
       </div>
-      <div id="m21" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/modeling/mod1.png"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/modeling/mod5.jpg" @click="ShowModal('m25')"/>
-      </div>
-      <div id="m25" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/modeling/mod5.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/modeling/mod3.jpg" @click="ShowModal('m23')"/>
-      </div>
-      <div id="m23" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/modeling/mod3.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/modeling/mod2.jpg" @click="ShowModal('m22')"/>
-      </div>
-      <div id="m22" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/modeling/mod2.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/modeling/mod4.png" @click="ShowModal('m24')"/>
-      </div>
-      <div id="m24" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/modeling/mod4.png"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/modeling/mod6.jpg" @click="ShowModal('m26')"/>
-      </div>
-      <div id="m26" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/modeling/mod6.jpg"/>
-      </div>
-
     </div>
   </section>
 
@@ -55,6 +18,18 @@
 
 <script>
 export default {
+  data () {
+    return {
+      images: [
+        {src: 'mod1.png', id: "m41" },
+        {src: 'mod2.png', id: "m42" },
+        {src: 'mod3.jpg', id: "m43" },
+        {src: 'mod4.jpg', id: "m44" },
+        {src: 'mod5.jpg', id: "m45" },
+        {src: 'mod6.jpg', id: "m46" },
+      ]
+    }
+  },
   methods: {
     ShowModal(elId) {
       let modalAll = document.getElementById(elId);
@@ -65,6 +40,10 @@ export default {
       if (event.target.classList.contains('modal-all')) {
         event.currentTarget.style.display = "none";
       }
+    },
+
+    getImageUrl(name) {
+      return new URL(`/src/assets/img/portfolio/modeling/${name}`, import.meta.url).href
     }
   }
 }
@@ -77,5 +56,16 @@ import Form from "./Form.vue";
 
 <style>
 
+.mod-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mod-item img{
+  width:300px;
+  display: block;
+  height: 300px;
+}
 
 </style>

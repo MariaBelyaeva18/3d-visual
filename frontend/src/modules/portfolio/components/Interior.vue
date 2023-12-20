@@ -2,63 +2,12 @@
   <h1>Интерьер</h1>
   <section class = "works">
     <div class = "port">
-
-      <div class="port-item" >
-        <img src ="../../../assets/img/portfolio/interior/inter1.jpg" @click="ShowModal('m1')"/>
+      <div class="port-item" v-for="image in images" :key="image.id">
+        <img :src="getImageUrl(image.src)" @click="ShowModal(image.id)"/>
+        <div :id="image.id" class="modal-all" @click="HideModal()">
+          <img :src="getImageUrl(image.src)"/>
+        </div>
       </div>
-      <div id="m1" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter1.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/interior/inter2.jpg" @click="ShowModal('m2')"/>
-      </div>
-      <div id="m2" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter2.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/interior/inter3.jpg" @click="ShowModal('m3')"/>
-      </div>
-      <div id="m3" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter3.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/interior/inter4.jpg" @click="ShowModal('m4')"/>
-      </div>
-      <div id="m4" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter4.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/interior/inter5.jpg" @click="ShowModal('m5')"/>
-      </div>
-      <div id="m5" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter5.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/interior/inter6.jpg" @click="ShowModal('m6')"/>
-      </div>
-      <div id="m6" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter6.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/interior/inter7.jpg" @click="ShowModal('m7')"/>
-      </div>
-      <div id="m7" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter7.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/interior/inter8.jpg" @click="ShowModal('m8')"/>
-      </div>
-      <div id="m8" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/interior/inter8.jpg"/>
-      </div>
-
     </div>
   </section>
 
@@ -69,6 +18,20 @@
 
 <script>
 export default {
+  data () {
+    return {
+      images: [
+        {src: 'inter1.jpg', id: "m11" },
+        {src: 'inter2.jpg', id: "m12" },
+        {src: 'inter3.jpg', id: "m13" },
+        {src: 'inter4.jpg', id: "m14" },
+        {src: 'inter5.jpg', id: "m15" },
+        {src: 'inter6.jpg', id: "m16" },
+        {src: 'inter7.jpg', id: "m17" },
+        {src: 'inter8.jpg', id: "m18" },
+      ]
+    }
+  },
   methods: {
     ShowModal(elId) {
       let modalAll = document.getElementById(elId);
@@ -79,6 +42,10 @@ export default {
       if (event.target.classList.contains('modal-all')) {
         event.currentTarget.style.display = "none";
       }
+    },
+
+    getImageUrl(name) {
+      return new URL(`/src/assets/img/portfolio/interior/${name}`, import.meta.url).href
     }
   }
 }
@@ -87,39 +54,19 @@ export default {
 <script setup>
 import OrderButton from "../../../layout/OrderButton.vue";
 import Form from "./Form.vue";
-import { vShow } from 'vue';
 </script>
 
 <style>
-
 .port-item {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.works {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.works img{
-  width:200px;
+.port-item img{
+  width:400px;
   display: block;
-  margin: auto;
-}
-
-.works{
-  zoom:150%;
-}
-
-.works img.zoomed {
-  transition: 1s;
-  transform: scale(2);
-  z-index: 1;
+  height: 300px;
 }
 
 .modal-all {

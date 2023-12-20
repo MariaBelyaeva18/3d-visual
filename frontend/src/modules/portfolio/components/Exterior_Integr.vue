@@ -2,35 +2,12 @@
   <h1>Экстерьер</h1>
   <section class = "works">
     <div class = "port">
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex1.jpg" @click="ShowModal('m31')"/>
+      <div class="port-item" v-for="image in photos" :key="image.id">
+        <img :src="getImageUrl(image.src)" @click="ShowModal(image.id)"/>
+        <div :id="image.id" class="modal-all" @click="HideModal()">
+          <img :src="getImageUrl(image.src)"/>
+        </div>
       </div>
-      <div id="m31" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/exterior/ex1.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex2.jpg" @click="ShowModal('m32')"/>
-      </div>
-      <div id="m32" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/exterior/ex2.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex3.jpg" @click="ShowModal('m33')"/>
-      </div>
-      <div id="m33" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/exterior/ex3.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/exterior/ex4.jpg" @click="ShowModal('m34')"/>
-      </div>
-      <div id="m34" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/exterior/ex4.jpg"/>
-      </div>
-
     </div>
   </section>
 
@@ -39,35 +16,12 @@
   <h1>Интеграции</h1>
   <section class = "works">
     <div class = "port">
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/integration/int1.jpg" @click="ShowModal('m41')"/>
+      <div class="port-item" v-for="image in images" :key="image.id">
+        <img :src="getImageUrl(image.src)" @click="ShowModal(image.id)"/>
+        <div :id="image.id" class="modal-all" @click="HideModal()">
+          <img :src="getImageUrl(image.src)"/>
+        </div>
       </div>
-      <div id="m41" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/integration/int1.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/integration/int2.jpg" @click="ShowModal('m42')"/>
-      </div>
-      <div id="m42" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/integration/int2.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/integration/int3.jpg" @click="ShowModal('m43')"/>
-      </div>
-      <div id="m43" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/integration/int3.jpg"/>
-      </div>
-
-      <div class = "port-item">
-        <img src ="../../../assets/img/portfolio/integration/int4.jpg" @click="ShowModal('m44')"/>
-      </div>
-      <div id="m44" class="modal-all" @click="HideModal()">
-        <img src ="../../../assets/img/portfolio/integration/int4.jpg"/>
-      </div>
-
     </div>
   </section>
 
@@ -79,6 +33,22 @@
 
 <script>
 export default {
+  data () {
+    return {
+      photos: [
+        {src: 'ex1.jpg', id: "m21" },
+        {src: 'ex2.jpg', id: "m22" },
+        {src: 'ex3.jpg', id: "m23" },
+        {src: 'ex4.jpg', id: "m24" },
+      ],
+      images: [
+        {src: 'int1.jpg', id: "m31" },
+        {src: 'int2.jpg', id: "m32" },
+        {src: 'int3.jpg', id: "m33" },
+        {src: 'int4.jpg', id: "m34" },
+      ]
+    }
+  },
   methods: {
     ShowModal(elId) {
       let modalAll = document.getElementById(elId);
@@ -89,6 +59,10 @@ export default {
       if (event.target.classList.contains('modal-all')) {
         event.currentTarget.style.display = "none";
       }
+    },
+
+    getImageUrl(name) {
+      return new URL(`/src/assets/img/portfolio/exterior/${name}`, import.meta.url).href
     }
   }
 }
