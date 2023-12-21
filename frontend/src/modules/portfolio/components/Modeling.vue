@@ -23,10 +23,10 @@ export default {
       images: [
         {src: 'mod1.png', id: "m41" },
         {src: 'mod2.png', id: "m42" },
-        {src: 'mod3.jpg', id: "m43" },
-        {src: 'mod4.jpg', id: "m44" },
-        {src: 'mod5.jpg', id: "m45" },
-        {src: 'mod6.jpg', id: "m46" },
+        {src: 'mod3.png', id: "m43" },
+        {src: 'mod4.png', id: "m44" },
+        {src: 'mod5.png', id: "m45" },
+        {src: 'mod6.png', id: "m46" },
       ]
     }
   },
