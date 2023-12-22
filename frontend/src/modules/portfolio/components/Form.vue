@@ -11,7 +11,7 @@
         Оформить заказ
         <v-icon
             style="justify-content: right"
-            @click="store.viewModal = false; this.reset()"
+            @click="this.reset(); store.viewModal = false; "
         >mdi-close</v-icon></v-list-item>
 
       <v-list nav>
@@ -45,10 +45,10 @@
           ></v-select>
 
           <v-text-field
-              label="Телефон"
+              label="Телефон (без +7)"
               density="comfortable"
               :value="store.form.phoneNumber"
-              :rules="rules"
+              :rules="trule"
               @update:modelValue="store.form.phoneNumber = $event"
           ></v-text-field>
 
@@ -56,7 +56,7 @@
               label="Электронная почта"
               density="comfortable"
               :value="store.form.email"
-              :rules="rules"
+              :rules="erule"
               @update:modelValue="store.form.email = $event"
           ></v-text-field>
 
@@ -91,6 +91,18 @@ export default {
           return "Incorrect data."
         }
       ],
+      erule: [
+        (value) => {
+          if (value && value.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)) return true
+          return "Invalid email format."
+        }
+      ],
+      trule: [
+        (value) => {
+          if (value && value.match(/^\d{10}$/)) return true
+          return "Invalid phone number format."
+        }
+      ]
     }
   },
 
